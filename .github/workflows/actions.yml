@@ -30,7 +30,7 @@ jobs:
       - name: mobsfscan
         uses: MobSF/mobsfscan@main
         with:
-          args: '. --json'
+          args: '.'
           
     #   - name: Run SAST (Static Application Security Testing)
     #     uses: github/codeql-action@v3
