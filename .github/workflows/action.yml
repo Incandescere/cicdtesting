@@ -30,7 +30,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with: 
-          Default: ${{ github.repository }}
+          Default: 'Incandescere/cicdtesting'
           
       - name: Run SAST (Static Application Security Testing)
         uses: github/codeql-action@v3
