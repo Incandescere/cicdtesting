@@ -26,22 +26,17 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
-        
-      - name: mobsfscan
-        uses: MobSF/mobsfscan@main
-        with:
-          args: '.'
           
-    #   - name: Run SAST (Static Application Security Testing)
-    #     uses: github/codeql-action@v3
-    #     with:
-    #       languages: android
-    #       query: java-code-scanning.qls
+      - name: Run SAST (Static Application Security Testing)
+        uses: github/codeql-action@v2
+        with:
+          languages: android
+          query: java-code-scanning.qls
 
-    #   - name: Upload SAST results
-    #     uses: github/codeql-action/upload-sarif@v3
-    #     with:
-    #       sarif_file: .github/codeql-analysis-results.sarif
+      - name: Upload SAST results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: .github/codeql-analysis-results.sarif
 
       - name: Build APK and AAB
         run: |
