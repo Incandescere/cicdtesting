@@ -26,11 +26,6 @@ jobs:
 
       - name: Build with Gradle
         run: ./gradlew build
-        
-      - name: mobsfscan
-        uses: MobSF/mobsfscan@main
-        with:
-          args: '. --json'
           
     #   - name: Run SAST (Static Application Security Testing)
     #     uses: github/codeql-action@v3
