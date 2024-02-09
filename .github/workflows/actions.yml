@@ -28,7 +28,9 @@ jobs:
         run: ./gradlew build
 
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
+        with: 
+          Default: ${{ github.repository }}
           
       - name: Run SAST (Static Application Security Testing)
         uses: github/codeql-action@v3
