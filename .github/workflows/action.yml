@@ -28,7 +28,7 @@ jobs:
         run: ./gradlew build
 
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with: 
           Default: ${{ github.repository }}
           
