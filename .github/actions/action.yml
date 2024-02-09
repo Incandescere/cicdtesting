@@ -33,7 +33,7 @@ jobs:
           Default: 'Incandescere/cicdtesting'
           
       - name: Run SAST (Static Application Security Testing)
-        uses: github/codeql-action@v4
+        uses: github/codeql-action@v3
         with:
           languages: android
           query: java-code-scanning.qls
